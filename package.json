@@ -1,0 +1,40 @@
+{
+  "name": "sf-describe-json",
+  "version": "0.1.1",
+  "description": "Describes a salesforce instance, and reads/writes results from json files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ./tsconfig.json",
+    "prepack": "npm run build && cp -Rav build/* . | ./scripts/parseEmitted.sh build.emit",
+    "postpack": "./scripts/postpack.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whiteabelincoln/sf-describe.git"
+  },
+  "keywords": [
+    "Salesforce",
+    "describe",
+    "json"
+  ],
+  "author": "Abraham White <abelincoln.white@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whiteabelincoln/sf-describe/issues"
+  },
+  "homepage": "https://github.com/whiteabelincoln/sf-describe#readme",
+  "devDependencies": {
+    "@shingo/tslint-rules": "^1.1.0",
+    "@types/node": "^10.12.15",
+    "prettier": "^1.15.3",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/jsforce": "^1.9.2",
+    "jsforce": "^1.9.1"
+  }
+}

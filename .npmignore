@@ -1,0 +1,13 @@
+.vscode
+.prettierignore
+.prettierrc
+.editorconfig
+index.ts
+tsconfig.json
+tslint.json
+*.tar.gz
+*.tgz
+*.tar
+build/
+scripts/
+*.emit
